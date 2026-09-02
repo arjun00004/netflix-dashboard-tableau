@@ -1,182 +1,115 @@
-# 🎬 Netflix Content Analysis Dashboard | Tableau
+# 🎬 Netflix Movies & TV Shows Analysis — Tableau Dashboard
 
+An interactive Tableau dashboard exploring Netflix's global content library — covering content type distribution, ratings, genres, countries, and growth trends from 2008 to 2020.
 
-![Logo](./netflix_logo.png)
-
-
-## 📊 Project Overview
-
-This project presents an interactive **Netflix Content Analysis Dashboard** developed using **Tableau**.
-
-The dashboard analyzes Netflix's movie and TV show catalog to identify patterns and insights across:
-
-- 🎬 Movies and TV Shows
-- 🌍 Countries
-- ⭐ Ratings
-- 🎭 Genres
-- 📅 Release Years
-- ⏱️ Movie Duration
-- 📈 Content Growth Trends
-
-The goal of this project is to transform raw Netflix content data into an interactive and visually engaging dashboard that can help users understand Netflix's content library.
+![Netflix Dashboard Preview](Netflix_dashboard.png)
 
 ---
 
-## 🎯 Project Objectives
+## 📌 Overview
 
-The main objectives of this project are:
+Netflix's catalog spans thousands of titles across genres, countries, and content ratings. This project analyzes that catalog to answer a simple but useful question: **what does Netflix's content library actually look like, and how has it evolved?**
 
-- Analyze the distribution of Movies and TV Shows on Netflix
-- Identify the most common content ratings
-- Analyze Netflix content production across different countries
-- Identify the top genres available on Netflix
-- Understand how Netflix content has changed over the years
-- Explore movie duration and content metadata
-- Build an interactive dashboard using Tableau
-
----
-
-## 🛠️ Tools & Technologies
-
-| Tool | Purpose |
-|------|---------|
-| 📊 Tableau | Data visualization & dashboard development |
-| 🧹 Data Cleaning | Preparing and transforming the dataset |
-| 📁 CSV Dataset | Source data |
-| 🐙 GitHub | Project version control & portfolio |
+The dashboard lets a user filter by **Type** (Movie / TV Show) and **Title**, and instantly see:
+- Full metadata for a selected title (rating, release year, duration, date added, genre, description)
+- How content is distributed across the world
+- The spread of content ratings (TV-MA, TV-14, R, PG, etc.)
+- The Movie vs. TV Show split
+- The top 10 most common genres
+- How Netflix's catalog has grown year over year
 
 ---
 
-## 📌 Dashboard Features
+## 🗂️ Dataset
 
-### 1️⃣ Content Overview
-
-The dashboard provides an overview of Netflix's content using interactive filters and KPI-style information.
-
-Key information includes:
-
-- Content Type
-- Rating
-- Release Year
-- Date Added
-- Duration
-- Genre
-- Description
+- **Source:** Netflix Movies and TV Shows dataset (Kaggle)
+- **Size:** ~6,234 titles (4,265 Movies · 1,969 TV Shows)
+- **Fields used:** Type, Title, Director, Cast, Country, Date Added, Release Year, Rating, Duration, Genre (`listed_in`), Description
 
 ---
 
-### 2️⃣ 🌍 Netflix Content by Country
+## 📊 Dashboard Breakdown
 
-A world map visualizes the distribution of Netflix Movies and TV Shows across different countries.
+### 1. Title Details Panel
+Dynamic search-and-filter panel — selecting a title from the dropdown updates the Rating, Release Year, Duration, Date Added, Genre, and Description in real time.
 
-This helps identify countries with a higher concentration of Netflix content.
+### 2. Total Movies & TV Shows by Country
+![Country Map](Screenshot_2026-09-01_175220.png)
+A choropleth map showing content volume by production country. The **United States dominates** the catalog, followed by **India**, reflecting Netflix's two largest content markets in this dataset.
 
----
+### 3. Ratings Distribution
+![Ratings Chart](Screenshot_2026-09-01_175356.png)
+`TV-MA` (2,027 titles) and `TV-14` (1,698 titles) are by far the most common ratings — together making up roughly **60% of the entire catalog** — indicating Netflix's content skews toward mature/teen audiences rather than family-friendly (G, TV-Y) content.
 
-### 3️⃣ ⭐ Ratings Analysis
+### 4. Movies vs. TV Shows Split
+![Distribution](Screenshot_2026-09-01_175308.png)
+**68.4% Movies** vs. **31.6% TV Shows** — Netflix's library is still primarily film-driven, though TV Shows have been the faster-growing category in recent years (see trend chart below).
 
-The ratings chart shows the distribution of Netflix titles across different content ratings.
+### 5. Top 10 Genres
+![Top Genres](Screenshot_2026-09-01_175245.png)
+**Documentaries** (299) and **Stand-Up Comedy** (273) lead the catalog, followed closely by international drama categories — highlighting Netflix's strong investment in documentary content and international storytelling.
 
-Examples include:
-
-- TV-MA
-- TV-14
-- TV-PG
-- R
-- PG-13
-- NR
-- PG
-- TV-Y7
-- TV-G
-- TV-Y
-
-This provides an understanding of the audience categories targeted by Netflix content.
+### 6. Content Growth by Year
+![Growth Trend](Screenshot_2026-09-01_175143.png)
+A sharp inflection point appears around **2015–2019**, where content additions grew nearly 5x — this is the period of Netflix's aggressive global content expansion, peaking around 2019 before the visible drop-off in 2020 (likely a data cutoff artifact rather than an actual decline).
 
 ---
 
-### 4️⃣ 🎭 Top 10 Genres
+## 🔍 Key Insights
 
-The dashboard highlights the most common genres available on Netflix.
-
-Top genres in the analysis include:
-
-1. Documentaries
-2. Stand-Up Comedy
-3. Dramas, International Movies
-4. Dramas, Independent Movies, International Movies
-5. Comedies, Dramas, International Movies
+| Insight | Detail |
+|---|---|
+| Content skew | Majority of content is rated for mature/teen audiences (TV-MA, TV-14) |
+| Format split | Movies outweigh TV Shows nearly 2:1 |
+| Top market | USA leads by a wide margin, India is a strong second |
+| Genre leader | Documentaries are Netflix's single largest genre category |
+| Growth story | Catalog size grew almost exponentially between 2015–2019 |
 
 ---
 
-### 5️⃣ 🎬 Movies vs TV Shows
+## 🛠️ Tools & Skills Used
 
-The content distribution visualization compares Movies and TV Shows.
-
-From the dashboard:
-
-- 🎬 Movies: **4,265**
-- 📺 TV Shows: **1,969**
-
-Movies represent approximately **68.42%** of the analyzed content, while TV Shows represent approximately **31.58%**.
+- **Tableau Desktop / Public** — dashboard design, calculated fields, parameter actions, filter actions
+- **Data Cleaning** — handling nulls/blanks in `country`, `rating`, and `duration` fields
+- **Data Visualization Design** — dark-theme UI consistent with Netflix branding, choropleth mapping, area charts, bar charts, packed bubbles
 
 ---
 
-### 6️⃣ 📅 Content Trends by Year
+## 🚀 Live Dashboard
 
-The yearly trend visualization shows how Netflix content changed over time.
-
-The dashboard indicates a significant increase in the number of titles added to the catalog during the later years of the dataset.
+🔗 **[View Interactive Dashboard on Tableau Public](#)** ← *replace with your Tableau Public link*
 
 ---
 
-## 🔎 Key Insights
+## 📁 Repository Structure
 
-Based on the dashboard:
-
-- 🎬 Movies form the majority of the Netflix catalog.
-- 📺 TV Shows represent a smaller but significant portion of the content.
-- ⭐ TV-MA is the most common rating in the analyzed dataset.
-- 🎭 Documentaries are among the highest-count genres.
-- 🌍 Netflix content is distributed across many countries worldwide.
-- 📈 Netflix's content catalog shows strong growth during the later years represented in the dataset.
-
-> Note: Insights are based on the dataset used for this project and may differ from Netflix's current catalog.
-
----
-
-## 🎨 Dashboard Design
-
-The dashboard uses a **Netflix-inspired dark theme** with red highlights.
-
-### Design Elements
-
-- ⚫ Dark background
-- 🔴 Netflix-inspired red accent
-- 📊 Interactive charts
-- 🌍 Geographic visualization
-- 🎯 KPI-style information
-- 🎭 Genre analysis
-- ⭐ Rating analysis
-- 📅 Time-series analysis
-
-The design was created to provide a clean and engaging analytical experience.
-
----
-
-## 📂 Project Structure
-
-```text
-netflix-content-analysis-tableau/
+```
+netflix-tableau-dashboard/
 │
-├── 📁 assets/
-│   └── netflix-dashboard.png
-│
-├── 📁 data/
-│   └── netflix_titles.csv
-│
-├── 📁 tableau/
-│   └── Netflix_Dashboard.twbx
-│
-├── 📄 README.md
-│
-└── 📄 LICENSE
+├── README.md
+├── Netflix_dashboard.png          # Full dashboard screenshot
+├── netflix_movies_tv_shows.csv    # Source dataset
+├── netflix_dashboard.twbx         # Tableau packaged workbook
+└── screenshots/
+    ├── ratings_chart.png
+    ├── genre_chart.png
+    ├── bubble_chart.png
+    ├── country_map.png
+    └── growth_trend.png
+    
+```
+
+---
+
+## 👤 About Me
+
+Aspiring **Data Analytics / Data Science**, currently building a portfolio of end-to-end data projects (Tableau, Power BI, Python, SQL) ahead of my job search.
+
+- 🔗 [https://www.linkedin.com/in/arjun1425/](#)
+- 📁 [https://github.com/Arjun42500](#)
+
+
+---
+
+⭐ *If you found this project useful or interesting, consider giving it a star!*
+
