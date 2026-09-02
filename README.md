@@ -88,7 +88,7 @@ netflix-tableau-dashboard/
 │
 ├── README.md
 ├── Netflix_dashboard.png          # Full dashboard screenshot
-├── netflix_movies_tv_shows.csv    # Source dataset
+├── netflix_titles.csv             # Source dataset
 ├── netflix_dashboard.twbx         # Tableau packaged workbook
 └── screenshots/
     ├── ratings_chart.png
