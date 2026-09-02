@@ -105,8 +105,8 @@ netflix-tableau-dashboard/
 
 Aspiring **Data Analytics / Data Science**, currently building a portfolio of end-to-end data projects (Tableau, Power BI, Python, SQL) ahead of my job search.
 
-- 🔗 [https://www.linkedin.com/in/arjun1425/](#)
-- 📁 [https://github.com/Arjun42500](#)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/arjun1425/)
+- 📁 [GitHub](https://github.com/Arjun42500)
 
 
 ---
