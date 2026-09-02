@@ -1,8 +1,8 @@
 # 🎬 Netflix Content Analysis Dashboard | Tableau
 
-<p align="center">
-  <img src="assets/netflix-dashboard.png" alt="Netflix Dashboard" width="100%">
-</p>
+
+![Logo](./netflix_logo.png)
+
 
 ## 📊 Project Overview
 
